@@ -6,7 +6,7 @@ targets:
     sed:
        name: template
        template: 'file2.txt'
-       flux: 1e-14
+       flux: 1.0e-14
        wavelength: 7600.0
   - id: tg2
     profile:
@@ -15,7 +15,7 @@ targets:
     sed:
         name: template
         template: 'file1.txt'
-        flux: 1e-10
+        flux: 1.0e-10
         wavelength: 3400.0
   - id: tg3
     profile:
@@ -23,5 +23,5 @@ targets:
     sed:
        name: blackbody
        temperature: 6440
-       flux: 1e-14
+       flux: 1.0e-15
        wavelength: 7600.0
