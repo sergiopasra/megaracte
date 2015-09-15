@@ -1,0 +1,27 @@
+
+targets:
+  - id: tg1
+    profile:
+       name: point
+    sed:
+       name: template
+       template: 'file2.txt'
+       flux: 1e-14
+       wavelength: 7600.0
+  - id: tg2
+    profile:
+        name: extended
+        radius: 3.4
+    sed:
+        name: template
+        template: 'file1.txt'
+        flux: 1e-10
+        wavelength: 3400.0
+  - id: tg3
+    profile:
+       name: point
+    sed:
+       name: blackbody
+       temperature: 6440
+       flux: 1e-14
+       wavelength: 7600.0
