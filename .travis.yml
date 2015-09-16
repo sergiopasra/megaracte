@@ -8,6 +8,10 @@ os:
   - linux
   - osx
 
+env:
+  - RR="--durations=10"
+  - RR=""
+
 # OSx seems to fail for the moment
 matrix:
   allow_failures:
@@ -16,4 +20,4 @@ matrix:
 # command to install dependencies
 #install: "pip install -r requirements.txt"
 # command to run tests
-script: py.test megaracte
+script: py.test $RR megaracte
