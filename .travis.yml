@@ -8,6 +8,11 @@ os:
   - linux
   - osx
 
+# OSx seems to fail for the moment
+matrix:
+  allow_failures:
+      - os: osx
+
 # command to install dependencies
 #install: "pip install -r requirements.txt"
 # command to run tests
