@@ -1,5 +1,5 @@
 import yaml
-
+import numpy
 import megaracte.cli
 
 megaracte.cli.main()
@@ -14,5 +14,10 @@ targets = allf['targets']
 
 from megaracte.targets import target_from_dict
 
+import matplotlib.pyplot as plt
+
 for t in targets:
-    print(target_from_dict(t))
+    tt = target_from_dict(t)
+
+    print(tt.sed)
+
