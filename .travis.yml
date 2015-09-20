@@ -20,7 +20,7 @@ matrix:
 
 # command to install dependencies
 install: 
- - if [[ $RR == '--cov' ]]; then pip install coverall; fi
+ - if [[ $RR == '--cov' ]]; then pip install coveralls; fi
  - if [[ $RR == '--cov' ]]; then pip install pytest-cov; fi
 # command to run tests
 script: 
