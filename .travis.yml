@@ -11,17 +11,19 @@ os:
 env:
   - RR="--durations=10"
   - RR=""
+  - RR="--cov"
 
 # OSx seems to fail for the moment
 matrix:
   allow_failures:
-      - os: osx
+   - os: osx
 
 # command to install dependencies
 install: 
- - pip install coveralls
+ - if [[ $RR == '--cov' ]]; then pip install coverall; fi
+ - if [[ $RR == '--cov' ]]; then pip install pytest-cov; fi
 # command to run tests
 script: 
   - py.test $RR megaracte
 after_success:
-  - coveralls
+  - if [[ $RR == '--cov' ]]; then coveralls; fi
