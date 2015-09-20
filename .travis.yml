@@ -3,26 +3,20 @@ python:
    - "2.7"
    - "3.3"
    - "3.4"
-
 os:
   - linux
   - osx
-
 env:
   - RR="--durations=10"
   - RR=""
-
 matrix:
   include:
    - python: 2.7
      os: linux
      env: RR="" COVERAGE=true
-
 # OSx seems to fail for the moment
-matrix:
   allow_failures:
    - os: osx
-
 # command to install dependencies
 install: 
  - if [[ $COVERAGE == true ]]; then pip install coveralls; fi
