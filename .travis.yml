@@ -13,7 +13,7 @@ matrix:
   include:
    - python: 2.7
      os: linux
-     env: RR="" COVERAGE=true
+     env: COVERAGE=true
 # OSx seems to fail for the moment
   allow_failures:
    - os: osx
@@ -23,6 +23,6 @@ install:
 # command to run tests
 script: 
   - py.test $RR megaracte
-  - if [[ $COVERAGE == true ]]; then coverage run --source numina -m py.test; fi
+  - if [[ $COVERAGE == true ]]; then coverage run --source megaracte -m py.test; fi
 after_success:
   - if [[ $COVERAGE == true ]]; then coveralls; fi
