@@ -11,7 +11,13 @@ os:
 env:
   - RR="--durations=10"
   - RR=""
-  - RR="--cov"
+
+matrix:
+  fast_finish: true
+  include:
+   - python: 2.7
+     os: linux
+     env: COVERAGE=true
 
 # OSx seems to fail for the moment
 matrix:
@@ -20,10 +26,10 @@ matrix:
 
 # command to install dependencies
 install: 
- - if [[ $RR == '--cov' ]]; then pip install coveralls; fi
- - if [[ $RR == '--cov' ]]; then pip install pytest-cov; fi
+ - if [[ $COVERAGE == true ]]; then pip install coveralls; fi
 # command to run tests
 script: 
   - py.test $RR megaracte
+  - if [[ $COVERAGE == true ]]; then coverage run --source numina -m py.test; fi
 after_success:
-  - if [[ $RR == '--cov' ]]; then coveralls; fi
+  - if [[ $COVERAGE == true ]]; then coveralls; fi
