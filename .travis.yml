@@ -13,11 +13,10 @@ env:
   - RR=""
 
 matrix:
-  fast_finish: true
   include:
    - python: 2.7
      os: linux
-     env: COVERAGE=true
+     env: RR="" COVERAGE=true
 
 # OSx seems to fail for the moment
 matrix:
