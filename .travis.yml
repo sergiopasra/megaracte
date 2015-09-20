@@ -18,7 +18,8 @@ matrix:
       - os: osx
 
 # command to install dependencies
-#install: "pip install -r requirements.txt"
+install: 
+ - pip install coveralls
 # command to run tests
 script: 
   - py.test $RR megaracte
