@@ -14,7 +14,7 @@ def profile_from_dict(dyct):
         raise ValueError('profile name %s nor recognized' % (name,))
 
 
-class Profile:
+class Profile(object):
     """Spatial profiles"""
     pass
 

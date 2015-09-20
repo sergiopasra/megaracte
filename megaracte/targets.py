@@ -4,15 +4,15 @@ from megaracte.sed import sed_from_dict
 
 
 def target_from_dict(dyct):
-    id = dyct['id']
+    myid = dyct['id']
 
     profile = profile_from_dict(dyct['profile'])
     sed = sed_from_dict(dyct['sed'])
 
-    return Target(id, profile, sed)
+    return Target(myid, profile, sed)
 
-class Target:
-    def __init__(self, id, profile, sed):
-        self.id = id
+class Target(object):
+    def __init__(self, myid, profile, sed):
+        self.id = myid
         self.profile = profile
         self.sed = sed

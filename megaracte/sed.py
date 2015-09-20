@@ -19,7 +19,7 @@ def sed_from_dict(dyct):
         raise ValueError('sed name %s nor recognized' % (name,))
 
 
-class Sed:
+class Sed(object):
     def __init__(self, wl, flux):
         self.flux = flux
         self.wl = wl
