@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 setup(name='megaracte',
-      version='0.1.dev0',
+      version='0.1.dev1',
       description='MEGARA CTE',
       url='https://github.com/sergiopasra/megaracte',
       license='GPLv3',
